@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 112px;
+  /* border: 1px solid black; */
+}
+.header-top {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #0d0d0d;
+}
+.headerLanguages {
+  display: flex;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 147px;
+  cursor: pointer;
+  user-select: none;
+}
+.header-bottom {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.header-bottom h1 {
+  margin-left: 145px;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+.header-bottom ul {
+  display: flex;
+  gap: 17px;
+  list-style: none;
+  margin-left: 100px;
+}
+.header-bottom ul li {
+  color: #000;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.logIn {
+  width: 54px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  color: #0d0d0d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.logUp {
+  width: 181px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #ffc000;
+  border: none;
+  color: #0d0d0d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+.headerShopping {
+  font-size: 22px;
+  margin-left: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+.menuButton {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.milandiLogo {
+  display: none;
+}
+@media (max-width: 390px) {
+  .header {
+    height: 70px;
+  }
+  .header-top {
+    display: none;
+  }
+  .header-bottom {
+    display: flex;
+    align-items: center;
+  }
+  .header-bottom h1 {
+    display: none;
+  }
+  .logIn,
+  .logUp {
+    display: none;
+  }
+  .header-bottom ul {
+    display: none;
+  }
+  .headerShopping {
+    margin-right: 32px;
+    font-size: 24px;
+  }
+  .menuButton {
+    display: block;
+    margin-left: 230px;
+  }
+  .milandiLogo {
+    display: block;
+    width: 41px;
+    margin-left: 25px;
+  }
+}
