@@ -150,10 +150,11 @@
     margin-left: 30px;
     margin-top: 16px;
     cursor: pointer;
+    /* border: 1px solid rebeccapurple; */
   }
   .allProductsArrow {
     color: #0d0d0d;
-    font-size: 11px;
+    font-size: 13px;
   }
   .allProductsRes p {
     font-weight: 600;
@@ -178,11 +179,13 @@
   color: #000;
   font-family: "Montserrat", sans-serif;
 }
-.advantagesProductDiv{
+.advantagesProductDiv {
   display: flex;
   gap: 140px;
 }
-.advantagesProduct1, .advantagesProduct2,.advantagesProduct3 {
+.advantagesProduct1,
+.advantagesProduct2,
+.advantagesProduct3 {
   position: relative;
   width: 294px;
   height: 144px;
@@ -237,20 +240,25 @@
     font-size: 24px;
     width: 50%;
     margin-left: 30px;
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
   }
-  .advantagesProductDiv{
+  .advantagesProductDiv {
     gap: 0;
     width: 100%;
   }
-  .advantagesProduct1{
+  .advantagesProduct1 {
     width: 100%;
     height: 160px;
     gap: 50px;
     border-radius: 0;
   }
-  .advantagesProduct2,.advantagesProduct3{
+  .advantagesProduct2,
+  .advantagesProduct3 {
     display: none;
+  }
+  .advantagesNextButton {
+    display: flex;
+    margin: 0 auto;
   }
 }
 .shopProducts {
@@ -283,6 +291,9 @@
   height: 337px;
   border-radius: 12px 12px 0px 0px;
 }
+.productsCardBottom {
+  padding: 5px 12px;
+}
 .productsCard h2 {
   font-weight: 600;
   font-size: 14px;
@@ -299,11 +310,21 @@
   letter-spacing: 0.4px;
   margin-top: 8px;
 }
+.productPopDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
 .productPop {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
   margin-left: 7px;
+}
+.productsStar {
+  color: #ffc000;
+  font-size: 14px;
+  cursor: pointer;
 }
 .productPrice {
   font-weight: 700;
@@ -325,4 +346,456 @@
   color: #000;
   cursor: pointer;
   user-select: none;
+}
+@media (max-width: 390px) {
+  .productsCard {
+    width: 152px;
+    height: 268px;
+  }
+  .productsImg {
+    height: 176px;
+  }
+  .productsCardBottom {
+    padding: 0 4px;
+  }
+  .productInfo {
+    display: none;
+  }
+  .productsCard button {
+    display: none;
+  }
+  .productsCard h2 {
+    font-weight: 500;
+    font-size: 14px;
+    width: 95%;
+    margin-top: 20px;
+  }
+  .productPrice {
+    position: absolute;
+    font-weight: 700;
+    font-size: 10px;
+    display: flex;
+    top: 60px;
+    left: -85px;
+  }
+  .productPopDiv {
+    position: absolute;
+    top: 170px;
+  }
+  .productPop {
+    font-weight: 700;
+    font-size: 10px;
+  }
+  .productsStar {
+    font-size: 11px;
+  }
+}
+#catigories {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  /* border: 1px solid red; */
+}
+#catigories h1 {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+}
+.catigoriesDivs {
+  position: relative;
+  display: flex;
+  gap: 35px;
+  margin-top: 38px;
+}
+.catigoriesDivs div {
+  cursor: pointer;
+}
+.catigoriesCards1,
+.catigoriesCards2,
+.catigoriesCards3,
+.catigoriesCards4 {
+  height: 352px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.catigoriesImgs {
+  width: 264px;
+  height: 352px;
+  transition: all 0.25s;
+}
+.catigoriesButton {
+  width: 264px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0d;
+  border-radius: 0px 0px 8px 8px;
+  cursor: pointer;
+}
+.catigoriesButton p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffc000;
+  font-family: "Montserrat", sans-serif;
+}
+.catigoriesDivs div:hover .catigoriesImgs {
+  height: 278px;
+}
+.catigoriesNextButton {
+  position: relative;
+  display: none;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  /* border: 1px solid red; */
+}
+.catigoriesNextButton div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid black; */
+  cursor: pointer;
+}
+.catigoriesNextButton div span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  opacity: 0.2;
+}
+@media (max-width: 390px) {
+  #catigories {
+    align-items: flex-start;
+    width: 95%;
+    margin: 64px auto 0 auto;
+    /* border: 1px solid; */
+  }
+  .catigoriesDivs {
+    gap: 15px;
+  }
+  .catigoriesCards1,
+  .catigoriesCards2,
+  .catigoriesCards3,
+  .catigoriesCards4 {
+    width: 152px;
+    height: 163px;
+    margin-left: 9px;
+  }
+  .catigoriesCards3 {
+    display: none;
+  }
+  .catigoriesCards4 {
+    display: none;
+  }
+  .catigoriesImgs {
+    width: 100%;
+    height: 163px;
+  }
+  .catigoriesButton {
+    display: none;
+  }
+  .catigoriesDivs div:hover .catigoriesImgs {
+    height: 163px;
+  }
+  .catigoriesNextButton {
+    display: flex;
+    margin: 20px auto 0 auto;
+  }
+}
+.downloadApp {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin-top: 245px;
+  background: radial-gradient(100% 1071.07% at 0% 0%, #0f0d2b 0%, #0c0926 100%);
+}
+.iphone12 {
+  width: 390px;
+  margin-left: 125px;
+  transform: translateY(-115px);
+  /* border: 1px solid red; */
+}
+.appInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px;
+  /* border: 1px solid red; */
+}
+.appInfo h1 {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: 720px;
+}
+.appInfo h2 {
+  display: none;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: 720px;
+}
+.appInfo p {
+  width: 680px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.44px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 24px;
+  opacity: 80%;
+}
+.appInfo h4 {
+  display: none;
+  width: 680px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.44px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 24px;
+  opacity: 80%;
+}
+.downloadAps {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+.downloadAps img {
+  width: 200px;
+  cursor: pointer;
+}
+@media (max-width: 390px) {
+  .downloadApp {
+    flex-direction: column;
+    height: 720px;
+    gap: 0;
+    margin-top: 100px;
+  }
+  .iphone12 {
+    width: 223px;
+    transform: translate(-90px, -65px);
+    /* border: 1px solid red; */
+  }
+  .appInfo {
+    width: 96%;
+    margin-top: -50px;
+    margin-left: 30px;
+    align-items: flex-start;
+  }
+  .appInfo h1 {
+    display: none;
+  }
+  .appInfo h2 {
+    display: block;
+    width: 300px;
+  }
+  .appInfo p {
+    display: none;
+  }
+  .appInfo h4 {
+    width: 300px;
+    display: block;
+  }
+  .downloadAps {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.newProduct {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+  /* border: 1px solid red; */
+}
+.newProduct h1 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.newProductCards {
+  position: relative;
+  display: flex;
+  gap: 35px;
+  margin-top: 32px;
+}
+.newProductNextButton {
+  position: relative;
+  display: none;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  /* border: 1px solid red; */
+}
+.newProductNextButton div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid black; */
+  cursor: pointer;
+}
+.newProductNextButton div span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  opacity: 0.2;
+}
+@media (max-width: 390px) {
+  .newProduct{
+    margin-top: 40px;
+  }
+  .newProductNextButton {
+    display: flex;
+  }
+}
+.designProduct {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-top: 65px;
+  background-color: #fff;
+  /* border: 1px solid red; */
+}
+.designProduct img {
+  width: 705px;
+  height: 470px;
+}
+.designProductInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  /* border: 1px solid red; */
+}
+.designProductInfo h1 {
+  width: 500px;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #0d0d0d;
+}
+.designProductInfo p {
+  width: 540px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin-top: 24px;
+}
+.designProductInfo h4 {
+  display: none;
+  width: 540px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin-top: 24px;
+}
+.designProductInfo button {
+  width: 197px;
+  height: 36px;
+  background: #ffc000;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  margin-top: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 390px) {
+  .designProduct {
+    width: 93%;
+    height: 580px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 32px auto 0 auto;
+  }
+  .designProduct img {
+    width: 100%;
+    height: 303px;
+  }
+  .designProductInfo{
+    margin-left: 10px;
+    align-items: center;
+  }
+  .designProductInfo h1 {
+    width: 290px;
+    font-size: 24px;
+    margin-top: 16px;
+  }
+  .designProductInfo p {
+    display: none;
+  }
+  .designProductInfo h4 {
+    display: block;
+    width: 280px;
+    margin-top: 16px;
+  }
+  .designProductInfo button {
+    width: 197px;
+    height: 36px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+}
+.discounts {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgba(255, 192, 0, 1);
+}
+.discounts h1 {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #0d0d0d;
+  width: 700px;
+  text-align: center;
+}
+.discounts h1 span {
+  font-size: 60px;
+}
+@media(max-width:390px){
+  .discounts{
+    width: 100%;
+    height: 170px;
+    margin-top: 40px;
+  }
+  .discounts h1 {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .discounts h1 span {
+    font-size: 20px;
+    font-weight: 400;
+  }
 }

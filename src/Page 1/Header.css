@@ -65,8 +65,8 @@
   user-select: none;
 }
 .logIn {
-  width: 54px;
-  height: 22px;
+  width: 70px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,8 +81,8 @@
   user-select: none;
 }
 .logUp {
-  width: 181px;
-  height: 22px;
+  width: 197px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,9 +102,9 @@
   cursor: pointer;
   user-select: none;
 }
-.menuButton {
+#menuButton {
   display: none;
-  font-size: 24px;
+  font-size: 25px;
   cursor: pointer;
 }
 .milandiLogo {
@@ -135,9 +135,10 @@
     margin-right: 32px;
     font-size: 24px;
   }
-  .menuButton {
+  #menuButton {
     display: block;
-    margin-left: 230px;
+    margin-left: 30px;
+    color: #000;
   }
   .milandiLogo {
     display: block;
