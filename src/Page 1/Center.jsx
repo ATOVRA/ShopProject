@@ -23,7 +23,10 @@ import Iphone12Pro from "../Image/iPhone 12 Pro.png";
 import AppStore from "../Image/AppStore.jpg";
 import GooglePlay from "../Image/GooglePlay.jpg";
 import DesignProductImg from "../Image/fastProduct.png";
-import Footer from "./Footer.jsx";
+import { Link, useNavigate, } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCurrentProduct } from "../store/slices/currentProduct";
+import {addToCart, setShoppingProduct} from "../store/slices/cart"
 
 export const Center = () => {
   return (
@@ -36,9 +39,7 @@ export const Center = () => {
       <DownloadApp />
       <NewProduct />
       <DesignProduct />
-      <Discounts/>
-      <Footer/>
-      {/* <FooterResponsive/> */}
+      <Discounts />
     </main>
   );
 };
@@ -156,34 +157,48 @@ const Advantages = () => {
 };
 
 const ShopProducts = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const onItemClick = (item) => {
+    dispatch(setCurrentProduct(item));
+    navigate("/product-info");
+  };
+
+  const ClickShopping = (item) =>{
+    dispatch(addToCart(item))
+  }
+
   return (
     <div className="shopProducts">
       <h1>Лучшие товары</h1>
       <div style={{ display: "flex", gap: "35px" }}>
         {data.map((item, index) => {
-          // if (index == 0)
-            return (
-              <div className="productsCard" key={index}>
-                <img src={item.productImg} className="productsImg" />
-                <div className="productsCardBottom">
-                  <h2>{item.productTitle}</h2>
-                  <p className="productInfo">{item.productInfo}</p>
-                  <div className="productPopDiv">
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarHalfOutline className="productsStar" />
-                    <TiStarOutline className="productsStar" />
-                    <p className="productPop">{item.productPop}</p>
-                    <p className="productPrice">
-                      {item.productPrice}{" "}
-                      <span style={{ marginLeft: "5px" }}> У.E.</span>
-                    </p>
-                  </div>
-                  <button>Добавить в корзину</button>
+          return (
+            <div className="productsCard" key={index}>
+              <img
+                src={item.productImg}
+                className="productsImg"
+                onClick={() => onItemClick(item)}
+              />
+              <div className="productsCardBottom">
+                <h2 onClick={() => onItemClick(item)}>{item.productTitle}</h2>
+                <p className="productInfo">{item.productInfo}</p>
+                <div className="productPopDiv">
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarHalfOutline className="productsStar" />
+                  <TiStarOutline className="productsStar" />
+                  <p className="productPop">{item.productPop}</p>
+                  <p className="productPrice">
+                    {item.productPrice}{" "}
+                    <span style={{ marginLeft: "5px" }}> У.E.</span>
+                  </p>
                 </div>
+                <button onClick={()=>ClickShopping(item)}>Добавить в корзину</button>
               </div>
-            );
+            </div>
+          );
         })}
       </div>
     </div>
@@ -278,28 +293,28 @@ const NewProduct = () => {
       <div className="newProductCards">
         {NewProductData.map((item, index) => {
           // if (index == 0)
-            return (
-              <div className="productsCard" key={index}>
-                <img src={item.productImg} className="productsImg" />
-                <div className="productsCardBottom">
-                  <h2>{item.productTitle}</h2>
-                  <p className="productInfo">{item.productInfo}</p>
-                  <div className="productPopDiv">
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarFullOutline className="productsStar" />
-                    <TiStarHalfOutline className="productsStar" />
-                    <TiStarOutline className="productsStar" />
-                    <p className="productPop">{item.productPop}</p>
-                    <p className="productPrice">
-                      {item.productPrice}{" "}
-                      <span style={{ marginLeft: "5px" }}> У.E.</span>
-                    </p>
-                  </div>
-                  <button>Добавить в корзину</button>
+          return (
+            <div className="productsCard" key={index}>
+              <img src={item.productImg} className="productsImg" />
+              <div className="productsCardBottom">
+                <h2>{item.productTitle}</h2>
+                <p className="productInfo">{item.productInfo}</p>
+                <div className="productPopDiv">
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarFullOutline className="productsStar" />
+                  <TiStarHalfOutline className="productsStar" />
+                  <TiStarOutline className="productsStar" />
+                  <p className="productPop">{item.productPop}</p>
+                  <p className="productPrice">
+                    {item.productPrice}{" "}
+                    <span style={{ marginLeft: "5px" }}> У.E.</span>
+                  </p>
                 </div>
+                <button>Добавить в корзину</button>
               </div>
-            );
+            </div>
+          );
         })}
       </div>
       <div className="newProductNextButton">

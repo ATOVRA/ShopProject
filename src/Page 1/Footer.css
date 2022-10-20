@@ -235,4 +235,7 @@
     #footerResponsive{
         display: flex;
     }
+    .footer{
+      display: none ;
+    }
 }

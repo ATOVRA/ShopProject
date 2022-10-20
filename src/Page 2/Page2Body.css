@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Inter', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Page2Body {
+  position: relative;
+  width: 100%;
+  background-color: #e5e5e5;
+}
+.ONas {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 65px;
+
+  /* border: 1px solid red; */
+}
+.ONas h1 {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+.infoDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 130px;
+  margin-top: 25px;
+}
+.infoDiv h2 {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  width: 540px;
+}
+.infoDiv p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin-top: 24px;
+  width: 560px;
+}
+.infoDivRes {
+  position: relative;
+  width: 90%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px auto 0 auto;
+}
+.infoDivRes h2 {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  width: 300px;
+  margin: 16px 0;
+}
+.infoDivRes p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin-top: 24px;
+  width: 360px;
+}
+.infoDivRes img {
+  width: 100%;
+}
+@media (max-width: 390px) {
+  .ONas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ONas h1 {
+    margin-left: 28px;
+  }
+  .infoDiv {
+    display: none;
+  }
+  .infoDivRes {
+    display: flex;
+  }
+}
+.ONasAdvantages {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 67px;
+  /* border: 1px solid red; */
+}
+.ONasAdvantages h1 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.ONasAdvantagesProductDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 160px;
+  gap: 170px;
+  background-color: #fff;
+}
+.ONasAdvantagesProduct1,
+.ONasAdvantagesProduct2,
+.ONasAdvantagesProduct3 {
+  position: relative;
+  width: 294px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  /* border-radius: 12px; */
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.ONasAdvantagesProductDiv p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.ONasAdvantagesNextButton {
+  position: relative;
+  display: none;
+  align-items: center;
+  gap: 18px;
+  margin-top: 5px;
+  /* border: 1px solid red; */
+}
+.ONasAdvantagesNextButton div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid black; */
+  cursor: pointer;
+}
+.ONasAdvantagesNextButton div span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  opacity: 0.2;
+}
+.downloadApp {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin-top: 255px;
+  background: radial-gradient(100% 1071.07% at 0% 0%, #0f0d2b 0%, #0c0926 100%);
+}
+.iphone12 {
+  width: 390px;
+  margin-left: 125px;
+  transform: translateY(-115px);
+  /* border: 1px solid red; */
+}
+.appInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px;
+  /* border: 1px solid red; */
+}
+.appInfo h1 {
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: 720px;
+}
+.appInfo h2 {
+  display: none;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  width: 720px;
+}
+.appInfo p {
+  width: 680px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.44px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 24px;
+  opacity: 80%;
+}
+.appInfo h4 {
+  display: none;
+  width: 680px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.44px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 24px;
+  opacity: 80%;
+}
+.downloadAps {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+.downloadAps img {
+  width: 200px;
+  cursor: pointer;
+}
+@media (max-width: 390px) {
+  .downloadApp {
+    flex-direction: column;
+    height: 720px;
+    gap: 0;
+    margin-top: 100px;
+  }
+  .iphone12 {
+    width: 223px;
+    transform: translate(-90px, -65px);
+    /* border: 1px solid red; */
+  }
+  .appInfo {
+    width: 96%;
+    margin-top: -50px;
+    margin-left: 30px;
+    align-items: flex-start;
+  }
+  .appInfo h1 {
+    display: none;
+  }
+  .appInfo h2 {
+    display: block;
+    width: 300px;
+  }
+  .appInfo p {
+    display: none;
+  }
+  .appInfo h4 {
+    width: 300px;
+    display: block;
+  }
+  .downloadAps {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.mapSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 170px;
+  margin-top: 153px;
+  /* border: 1px solid red; */
+}
+.mapSection img {
+  width: 600px;
+}
+.mapInfo h1 {
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 46px;
+  color: #000;
+  width: 480px;
+  /* border: 1px solid red; */
+}
+.mapLocation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  height: auto;
+  margin-top: 65px;
+  /* border: 1px solid red; */
+}
+.mapLocation h3 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+.mapLocation p {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  width: 160px;
+}
+.london {
+  margin-left: 128px;
+}
+.moscow {
+  margin-top: 36px;
+}
+.prague {
+  margin-left: 128px;
+  margin-top: 36px;
+}
+@media (max-width: 390px) {
+  .mapSection {
+    flex-direction: column;
+    gap: 0;
+  }
+  .mapSection img {
+    width: 100%;
+  }
+  .mapInfo {
+    width: 90%;
+    margin-top: 16px;
+  }
+  .mapInfo h1 {
+    width: 300px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 28px;
+  }
+  .mapLocation{
+    width: 100%;
+    margin-left: 28px;
+    margin-top: 24px;
+  }
+  .mapLocation p {
+    width: 150px;
+    margin-top: 8px;
+  }
+  .london {
+    margin-left: 23px;
+  }
+  .moscow {
+    margin-top: 64px;
+  }
+  .prague {
+    margin-left: 24px;
+    margin-top: 64px;
+  }
+}

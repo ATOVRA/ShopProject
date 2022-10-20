@@ -1,10 +1,15 @@
 import "./Header.css";
 import React from "react";
 import { FiShoppingCart, FiMenu } from "react-icons/fi";
-import {GrMenu} from "react-icons/gr"
+import { GrMenu } from "react-icons/gr";
 import MilandiLogo from "../Image/milandLogo.jpg";
+import { Center } from "./Center";
+import { Page2Body } from "../Page 2/Page2Body";
+import { Routes, Route, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
+  const basket = useSelector((state) => state.cart.basket);
   return (
     <section className="header">
       <div className="header-top">
@@ -18,17 +23,25 @@ export const Header = () => {
         <img src={MilandiLogo} alt="Logo" className="milandiLogo" />
         <h1>MILAND</h1>
         <ul>
-          <li>Главная</li>
-          <li>O нас</li>
-          <li>Категории</li>
-          <li>Сотрудничество</li>
+          <li>
+            <Link to="/">Главная</Link>
+          </li>
+          <li>
+            <Link to="/onas">O нас</Link>
+          </li>
+          <li>
+            <Link>Категории</Link>
+          </li>
+          <li>
+            <Link to="/Мужская одежда">Сотрудничество</Link>
+          </li>
         </ul>
         <div
           style={{
             display: "flex",
             alignItems: "center",
             gap: "15px",
-            marginLeft: "550px",
+            marginLeft: "270px",
           }}
         >
           <button className="logIn ">
@@ -36,8 +49,14 @@ export const Header = () => {
           </button>
           <button className="logUp">Зарегистрироваться</button>
         </div>
-        <FiShoppingCart className="headerShopping" />
+        <Link to={"/basket"} style={{ position: "relative" }}>
+          <FiShoppingCart className="headerShopping" />
+          {basket.length !== 0 ? (
+            <div className="shoppingValue">{basket.length}</div>
+          ) : null}
+        </Link>
       </div>
     </section>
   );
 };
+export default Header;
